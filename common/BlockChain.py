@@ -7,6 +7,12 @@ from typing import Any, Dict, Optional, List
 
 
 class Block:
+    """
+    Represents a block in the blockchain, containing transaction data, timestamps,
+    and cryptographic hashes that link it to the previous block, thus ensuring
+    the integrity and immutability of the blockchain.
+    """
+
     def __init__(self, transaction: Optional[Dict[str, Any]], timestamp: float, previous_hash: str) -> None:
         """
         Initializes a new block.
@@ -55,6 +61,10 @@ class Block:
 
 
 class Blockchain:
+    """
+    Represents the blockchain itself, a digital ledger consisting of linked blocks.
+    This class provides methods to create the genesis block, add new blocks, and verify the integrity of the chain.
+    """
     def __init__(self) -> None:
         """
         Initializes the blockchain with a genesis block.
